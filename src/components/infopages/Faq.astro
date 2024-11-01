@@ -8,10 +8,10 @@
           <p
             class="text-3xl font-normal tracking-tight text-black font-display"
           >
-            Frequently asked questions
+            Coisas que você deve estar se perguntando
           </p>
           <p class="text-base mt-4 text-zinc-500">
-            Answers to commonly asked questions about our platform
+            Respostas para as perguntas comuns sobre nossa plataforma.
           </p>
         </div>
       </div>
@@ -33,7 +33,7 @@
             @click="setActiveAccordion(id)"
             class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
           >
-            <span>How does WordSync ensure content quality?</span>
+            <span>Como o WordSync garante a qualidade do conteúdo?</span>
             <svg
               class="w-5 h-5 duration-300 ease-out text-accent-500 -rotate-[45deg]"
               :class="{ '-rotate-[45deg]': activeAccordion==id }"
@@ -50,7 +50,7 @@
           </button>
           <div x-show="activeAccordion==id" x-collapse="">
             <div class="p-4 pt-2 text-zinc-500">
-              WordSync uses advanced AI and optimization algorithms to create content aligned with SEO best practices and adaptable tones, delivering relevant and high-quality output.
+              O WordSync utiliza IA avançada e algoritmos de otimização para criar conteúdo alinhado às melhores práticas de SEO, com tons adaptáveis e alta relevância.
             </div>
           </div>
         </div>
@@ -64,7 +64,7 @@
             class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
           >
             <span
-              >Can I customize the style and tone of the generated content?</span
+              >Posso personalizar o estilo e tom do conteúdo gerado?</span
             >
             <svg
               class="w-5 h-5 duration-300 ease-out text-accent-500"
@@ -86,7 +86,7 @@
             style="display: none;"
           >
             <div class="p-4 pt-2 text-zinc-500">
-              Yes, WordSync allows you to adjust the tone and style to suit your target audience, with options ranging from formal to casual and direct to descriptive.
+              Sim, é possível ajustar o tom e estilo para diferentes públicos, de formal a casual.
             </div>
           </div>
         </div>
@@ -100,7 +100,7 @@
             class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
           >
             <span
-              >Can I integrate WordSync with my WordPress site?</span
+              >O WordSync se integra ao WordPress?</span
             >
             <svg
               class="w-5 h-5 duration-300 ease-out text-accent-500"
@@ -122,7 +122,42 @@
             style="display: none;"
           >
             <div class="p-4 pt-2 text-zinc-500">
-              Absolutely! WordSync integrates seamlessly with WordPress for automatic publishing, with customizable settings for status, categories, and scheduled posts.
+              Claro! O WordSync se integra perfeitamente ao WordPress, permitindo a publicação automática com configurações personalizáveis de status, categorias e agendamento de postagens.
+          </div>
+        </div>
+        <div
+          x-data="{ id: $id('accordion') }"
+          :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-accent-500': activeAccordion!=id }"
+          class="cursor-pointer group text-zinc-600 hover:text-accent-500"
+        >
+          <button
+            @click="setActiveAccordion(id)"
+            class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
+          >
+            <span
+              >Como funciona a geração automática de imagens?</span
+            >
+            <svg
+              class="w-5 h-5 duration-300 ease-out text-accent-500"
+              :class="{ '-rotate-[45deg]': activeAccordion==id }"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v12m6-6H6"></path></svg
+            >
+          </button>
+          <div
+            x-show="activeAccordion==id"
+            x-collapse=""
+            style="display: none;"
+          >
+            <div class="p-4 pt-2 text-zinc-500">
+              Para cada artigo criado, o WordSync gera automaticamente uma imagem de destaque alinhada ao tema do conteúdo.
             </div>
           </div>
         </div>
@@ -136,7 +171,7 @@
             class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
           >
             <span
-              >How does automatic image generation work?</span
+              >É possível criar conteúdo em vários idiomas?</span
             >
             <svg
               class="w-5 h-5 duration-300 ease-out text-accent-500"
@@ -158,7 +193,41 @@
             style="display: none;"
           >
             <div class="p-4 pt-2 text-zinc-500">
-              For each article created, WordSync generates an image automatically, aligned with the content’s theme, to enhance visual appeal.
+              Sim, o WordSync oferece suporte a múltiplos idiomas, permitindo que você crie conteúdo adaptado a diferentes públicos e países.
+            </div>
+          </div>
+        </div>
+        <div
+          x-data="{ id: $id('accordion') }"
+          :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-accent-500': activeAccordion!=id }"
+          class="cursor-pointer group text-zinc-600 hover:text-accent-500"
+        >
+          <button
+            @click="setActiveAccordion(id)"
+            class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
+          >
+            <span>Quais recursos de SEO a plataforma possui?</span>
+            <svg
+              class="w-5 h-5 duration-300 ease-out text-accent-500"
+              :class="{ '-rotate-[45deg]': activeAccordion==id }"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v12m6-6H6"></path></svg
+            >
+          </button>
+          <div
+            x-show="activeAccordion==id"
+            x-collapse=""
+            style="display: none;"
+          >
+            <div class="p-4 pt-2 text-zinc-500">     
+            O WordSync possui recursos de SEO que otimizam automaticamente o conteúdo, da criação de pautas até a busca de concorrentes e publicação automática.
             </div>
           </div>
         </div>
@@ -172,7 +241,7 @@
             class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
           >
             <span
-              >Can I generate content in multiple languages?</span
+              >Posso exportar ou migrar meus dados?</span
             >
             <svg
               class="w-5 h-5 duration-300 ease-out text-accent-500"
@@ -194,7 +263,7 @@
             style="display: none;"
           >
             <div class="p-4 pt-2 text-zinc-500">
-              Yes, WordSync supports multiple languages, allowing you to create content tailored to different audiences and global markets.
+              Sim, você pode exportar o conteúdo gerado e fazer backup dos seus dados, garantindo que seu trabalho esteja sempre acessível e seguro.
             </div>
           </div>
         </div>
@@ -207,7 +276,7 @@
             @click="setActiveAccordion(id)"
             class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
           >
-            <span>Does WordSync offer SEO features?</span>
+            <span>O uso do WordSync requer treinamento?</span>
             <svg
               class="w-5 h-5 duration-300 ease-out text-accent-500"
               :class="{ '-rotate-[45deg]': activeAccordion==id }"
@@ -228,77 +297,7 @@
             style="display: none;"
           >
             <div class="p-4 pt-2 text-zinc-500">
-              Yes, the platform automatically optimizes content for SEO, including internal linking between articles, ensuring that content is easily indexed and optimized.
-            </div>
-          </div>
-        </div>
-        <div
-          x-data="{ id: $id('accordion') }"
-          :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-accent-500': activeAccordion!=id }"
-          class="cursor-pointer group text-zinc-600 hover:text-accent-500"
-        >
-          <button
-            @click="setActiveAccordion(id)"
-            class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
-          >
-            <span
-              >Can I export or migrate my data from WordSync?</span
-            >
-            <svg
-              class="w-5 h-5 duration-300 ease-out text-accent-500"
-              :class="{ '-rotate-[45deg]': activeAccordion==id }"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              ><path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 6v12m6-6H6"></path></svg
-            >
-          </button>
-          <div
-            x-show="activeAccordion==id"
-            x-collapse=""
-            style="display: none;"
-          >
-            <div class="p-4 pt-2 text-zinc-500">
-              Yes, you can export generated content and back up your data, ensuring your work is always accessible and secure.
-            </div>
-          </div>
-        </div>
-        <div
-          x-data="{ id: $id('accordion') }"
-          :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-accent-500': activeAccordion!=id }"
-          class="cursor-pointer group text-zinc-600 hover:text-accent-500"
-        >
-          <button
-            @click="setActiveAccordion(id)"
-            class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
-          >
-            <span>Is training required to start using WordSync?</span>
-            <svg
-              class="w-5 h-5 duration-300 ease-out text-accent-500"
-              :class="{ '-rotate-[45deg]': activeAccordion==id }"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              ><path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 6v12m6-6H6"></path></svg
-            >
-          </button>
-          <div
-            x-show="activeAccordion==id"
-            x-collapse=""
-            style="display: none;"
-          >
-            <div class="p-4 pt-2 text-zinc-500">
-              No, WordSync is designed to be intuitive and user-friendly, allowing writers and marketers to start creating content quickly.
+              Não, o WordSync foi projetado para ser intuitivo e fácil de usar, permitindo que redatores e profissionais de marketing comecem a criar conteúdo rapidamente.
             </div>
           </div>
         </div>
